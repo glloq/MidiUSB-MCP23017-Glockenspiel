@@ -3,14 +3,14 @@ systeme concu pour un xylophone de 25 touches.
 l'arduino recoit les messages midi par USB et actionne la note selectionnée sur l'instrument a l'aide d'éléctroaimants
 
 Materiel electronique :
--arduino de type leonardo, Micro, Due, Zero etc ...
--2 modules MCP23017 pour ajouter 2x16 sorties
--4 Module ULN2803 pour controller 4 x 8 electroaimants jusqu'a 500mA
--25 electroaimants
+*arduino de type leonardo, Micro, Due, Zero etc ...
+*2 modules MCP23017 pour ajouter 2x16 sorties
+*4 Module ULN2803 pour controller 4 x 8 electroaimants jusqu'a 500mA
+*25 electroaimants
 
 librairies:
--MidiUSB.h
--Adafruit_MCP23017.h
+*MidiUSB.h
+*Adafruit_MCP23017.h
 
 --------------------------------------------------------------------------------------------------------
 ******************************************************************************************************
