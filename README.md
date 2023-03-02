@@ -1,3 +1,7 @@
+/**************************************************/
+/*********      WORK IN PROGRESS       ************/
+/**************************************************/
+
 systeme concu pour un xylophone de 25 touches.
 
 l'arduino recoit les messages midi par USB et actionne la note selectionnée sur l'instrument a l'aide d'éléctroaimants
