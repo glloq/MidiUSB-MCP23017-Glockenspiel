@@ -31,5 +31,5 @@ The Arduino receives MIDI messages via USB and triggers the selected note on the
 + 25 electromagnets.
 
 #### Libraries:
-+MidiUSB.h
-+Adafruit_MCP23017.h
++ MidiUSB.h
++ Adafruit_MCP23017.h
