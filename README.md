@@ -1,6 +1,6 @@
 Ce projet consiste en la création d'un instrument MIDI contrôlé par des messages MIDI à l'aide d'un microcontrôleur Arduino Leonardo. 
 
-L'instrument est un xylophone composé de 25 électroaimants, contrôlés par deux MCP23017 via la communication I2C. 
+L'instrument est un xylophone/Glockenspiel composé de 25 électroaimants, contrôlés par deux MCP23017 via la communication I2C. 
 Lorsqu'un message MIDI est reçu, il est analysé pour déterminer la note à jouer, et la fonction playNote est appelée pour activer l'électroaimant correspondant. 
 
 La fonction turnOnMagnet est utilisée pour activer la sortie numérique correspondante via la bibliothèque MCP23017. 
