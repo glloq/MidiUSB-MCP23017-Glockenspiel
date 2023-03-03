@@ -26,6 +26,8 @@ Le code est écrit de manière modulaire, ce qui facilite sa modification et son
 
 ## Configuration de l'instrument
 
+le fichier test_activation_time.ino est fait pour tester le temps d'activation a renseigner dans timeHit a la bonne position pour chaque note 
+
 Pour modifier la note de départ, le nombre de notes que l'instrument peut jouer et le temps pendant lequel l'électroaimant doit rester actif avant d'être désactivé. Il faut adapter la partie du code encadré a votre utilisation.
 
 ## Utilisation
