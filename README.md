@@ -1,35 +1,38 @@
+Ce projet consiste en la création d'un instrument MIDI contrôlé par des messages MIDI à l'aide d'un microcontrôleur Arduino Leonardo. 
 
-/***********************************************    WORK IN PROGRESS     ***********************************************/
+L'instrument est un xylophone composé de 25 électroaimants, contrôlés par deux MCP23017 via la communication I2C. 
+Lorsqu'un message MIDI est reçu, il est analysé pour déterminer la note à jouer, et la fonction playNote est appelée pour activer l'électroaimant correspondant. 
 
+La fonction turnOnMagnet est utilisée pour activer la sortie numérique correspondante via la bibliothèque MCP23017. 
+La fonction turnOffMagnet est appelée après un délai pour désactiver l'électroaimant et arrêter la note. 
 
-systeme concu pour un xylophone de 25 touches.
+Une interruption matérielle est utilisée pour gérer la temporisation et jouer les notes plus rapidement. 
 
-l'arduino recoit les messages midi par USB et actionne la note selectionnée sur l'instrument a l'aide d'éléctroaimants
+Le code est écrit de manière modulaire, ce qui facilite sa modification et son extension.
 
-#### Materiel electronique :
-+ arduino de type leonardo, Micro, Due, Zero etc ...
-+ 2 modules MCP23017 pour ajouter 2x16 sorties
-+ 4 Module ULN2803 pour controller 4 x 8 electroaimants jusqu'a 500mA
-+ 25 electroaimants
+## Matériel nécessaire
 
-#### librairies:
-+ MidiUSB.h
-+ Adafruit_MCP23017.h
+   - Arduino Leonardo ou compatible
+   - Xylophone avec 25 électroaimants
+   - 2 MCP23017
+   - 4 ULN2803 ou ULN2804 en fonction des electroaimants choisi (500Ma contre 1A max)
+   - Câble USB pour connecter l'Arduino à l'ordinateur
+   - Les câbles pour connecter les differents composants
 
---------------------------------------------------------------------------------------------------------
-******************************************************************************************************
---------------------------------------------------------------------------------------------------------
+## Bibliothèques utilisées
 
-System designed for a 25-key xylophone.
+  -  Adafruit_MCP23017 (pour contrôler les MCP23017 en I2C)
+  -  MIDIUSB (pour la communication MIDI via USB)
 
-The Arduino receives MIDI messages via USB and triggers the selected note on the instrument using electromagnets.
+## Configuration de l'instrument
 
-#### Electronic hardware:
-+ Arduino Leonardo, Micro, Due, Zero, etc.
-+ 2 MCP23017 modules to add 2x16 outputs.
-+ 4 ULN2803 modules to control 4 x 8 electromagnets up to 500mA.
-+ 25 electromagnets.
+Pour modifier la note de départ, le nombre de notes que l'instrument peut jouer et le temps pendant lequel l'électroaimant doit rester actif avant d'être désactivé. Il faut adapter la partie du code encadré a votre utilisation.
 
-#### Libraries:
-+ MidiUSB.h
-+ Adafruit_MCP23017.h
+## Utilisation
+
+   - Connectez l'Arduino au xylophone et aux MCP23017 à l'aide des câbles.
+   - Connectez l'Arduino à l'ordinateur à l'aide du câble USB.
+   - Téléversez le code sur l'Arduino à l'aide de l'IDE Arduino.
+   - Lancez un logiciel de production musicale ou un séquenceur MIDI sur votre ordinateur.
+   - Configurez le logiciel pour utiliser l'Arduino comme périphérique MIDI.
+   - Jouez de la musique sur le logiciel et les notes seront transmises à l'Arduino pour activer les électroaimants correspondants sur le xylophone.
