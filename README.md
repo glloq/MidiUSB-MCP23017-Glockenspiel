@@ -1,3 +1,5 @@
+## ---------------------------------- WORK IN PROGRESS ----------------------------
+
 Ce projet consiste en la création d'un instrument MIDI contrôlé par des messages MIDI à l'aide d'un microcontrôleur Arduino Leonardo. 
 
 L'instrument est un xylophone/Glockenspiel composé de 25 électroaimants, contrôlés par deux MCP23017 via la communication I2C. 
